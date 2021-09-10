@@ -1,3 +1,4 @@
+<br><br>
 <div class="card">
     <h4 class="card-header">Register</h4>
     <div class="card-body">
@@ -30,7 +31,14 @@
             password is required.
           </div>
         </div>
-  <br>
+        <div class="form-group">
+          <label for="cpassword">Confirm Password</label>
+          <input required ngModel name="cpassword" type="text" #cpassword="ngModel" class="form-control" id="cpassword">
+          <div class="alert alert-danger" *ngIf="cpassword.touched && !fullName.valid">
+            Confirm password is required or must be same with password.
+          </div>
+        </div>
+        <br>
         <button class="btn btn-primary" type="submit" [class.disabled]="!contactForm.valid">Submit</button>
   
       </form>

@@ -11,5 +11,8 @@ export class RegisterComponent {
       
         var password = form.password;
         console.log(password);
+
+        var cpassword = form.cpassword;
+        console.log(cpassword);
       }
 }
